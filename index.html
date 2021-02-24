@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service |OnlineMeal.com|</title>
+
+    <style>
+        /*css reset*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*css variables*/
+        :root {
+            --navbar-height: 59px;
+        }
+
+        /*navigation bar*/
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 0px;
+        }
+
+        #logo {
+            margin: 12px 17px;
+        }
+
+        #logo img {
+            height: 62px;
+            margin: 10px 15px;
+        }
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #navbar ul li {
+            display: flex;
+
+            list-style: none;
+            font-size: 20px;
+        }
+
+        #navbar ul li a {
+            display: block;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 2px;
+            color: white;
+        }
+
+        #navbar ul li a:hover {
+            color: white;
+            background-color: black;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 77%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            top: 0px;
+            left: 0px;
+        }
+
+        /*home section*/
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 429px;
+            padding: 3px 200px;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            background: url('img/paula-vermeulen-URjZkhqsuBk-unsplash\ \(1\).jpg') no-repeat center center/cover;
+            height: 70%;
+            width: 100%;
+            z-index: -50;
+            opacity: 0.99;
+            top: 0px;
+            left: 0px;
+        }
+
+        #home h1 {
+            color: ghostwhite;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #home p {
+            color: ghostwhite;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: fantasy;
+
+        }
+
+        /*utility classes*/
+        .h-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+        }
+
+        .h-primary-1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: tomato;
+            color: thistle;
+            margin: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .h-secondary {
+            font-size: 1.8rem;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /*service section*/
+        #services {
+            margin: 35px;
+            display: flex;
+        }
+
+        #services .box {
+            border: 2px solid brown;
+            margin: 2px 6px;
+            padding: 34px;
+            border-radius: 28px;
+            background: rgb(226, 159, 135);
+            margin-bottom: 20px;
+        }
+
+        #services .box img {
+            height: 156px;
+            margin: auto;
+            display: block;
+        }
+
+        #service .box p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /*client section*/
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #client-section {
+            height: 120px;
+
+        }
+
+        #client img {
+            height: 2px;
+            top: 10px;
+        }
+
+        #client-section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 62%;
+            z-index: -1;
+            opacity: 0.4;
+            background: url('img/leo-roza-r20iS8tjyKc-unsplash.jpg')no-repeat center center/cover;
+        }
+
+        #client-items {
+            padding: 50px;
+            margin: 12px;
+        }
+
+        /*contact section*/
+        #contact {
+            position: relative;
+
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('img/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg')no-repeat center center/cover;
+        }
+
+        footer {
+            background: black;
+            padding: 9px 20px;
+            color: white;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            padding: 34px;
+            text-align: center;
+        }
+
+        #contact-box form {
+            width: 40%;
+            font-size: 1.3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="img/logo.png">
+        </div>
+        <ul>
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="#Our Services">Our Services</a></li>
+            <li class="item"><a href="#Our Client">Our Client</a></li>
+            <li class="item"><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome To My Online Meal </h1>
+        <p>We provide Food Delivery all around the world.</p>
+        <p> Order your favourite dishes now. Hurry Up!</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary-1">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/nicolas-perondi-UxRhrU8fPHQ-unsplash.jpg" alt="">
+                <h2 class="h-secondary">Food Ordering</h2>
+                <p class="center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquid labore
+                    quibusdam. Nulla laborum dolorum, ad voluptatem asperiores sint unde.</p>
+            </div>
+            <div class="box">
+                <img src="img/lucian-alexe-afDu-GuxjjM-unsplash.jpg" alt="">
+                <h2 class="h-secondary">Food Delivery</h2>
+                <p class="center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquid labore
+                    quibusdam. Nulla laborum dolorum, ad voluptatem asperiores sint unde.</p>
+            </div>
+            <div class="box">
+                <img src="img/sk-uVPV_nV17Tw-unsplash.jpg" alt="">
+                <h2 class="h-secondary">Bulk Ordering</h2>
+                <p class="center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquid labore
+                    quibusdam. Nulla laborum dolorum, ad voluptatem asperiores sint unde.</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="client-section"></section>
+    <h1 class="h-primary-1">Our Client</h1>
+    <div id="clients">
+        <div class="client-items">
+            <img src="img/client.png" alt="our client">
+        </div>
+
+    </div>
+    <section id="contact">
+        <h1 class="h-primary-1">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="50" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy; www.MyOnlineMeal.com |All rights reserved|
+        </div>
+    </footer>
+
+</body>
+
+</html>
